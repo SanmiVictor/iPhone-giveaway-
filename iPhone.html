@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Giveaway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #007bff;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        .header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .header img {
+            max-width: 300px; /* Reduced size */
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        /* Confirmation Message Styles */
+        .message {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .message h1 {
+            color: #007bff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .message p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Win a Free iPhone!</h1>
+        <p>Enter your details below to participate in our giveaway!</p>
+        <!-- Replace 'iphone-image.png' with your actual image file name and path -->
+        <img src="iphone-image.png" alt="iPhone Giveaway">
+    </div>
+    <div class="container" id="form-container">
+        <form id="giveaway-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10,15}" required>
+                <small>Format: 10 to 15 digits only</small>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <!-- Add more countries as needed -->
+                </select>
+                <div class="form-group">
+                <label for="iPhone">iPhone:</label>
+                <select id="iPhone" name="iPhone" required>
+                    <option value="" disabled selected>Select iphone type</option>
+                    <option value="iPhone XR">iPhone XR</option>
+                    <option value="iPhone XS max">iPhone XS max</option>
+                    <option value="iPhone 10">iPhone 10</option>
+                    <option value="iPhone 11">iPhone 11</option>
+                    <option value="iPhone 12">iPhone 12</option>
+                    <option value="iPhone 12 pro">iPhone 12 pro</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enter Giveaway</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 iPhone Giveaway. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript for Confirmation Message -->
+    <script>
+        document.getElementById('giveaway-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Here you would typically handle form data, e.g., send it to a server
+            // For now, we'll just show the confirmation message
+
+            const formContainer = document.getElementById('form-container');
+            formContainer.innerHTML = `
+                <div class="message">
+                    <h1>Thank You!</h1>
+                    <p>Your entry has been successfully submitted.</p>
+                    <p>Stay tuned for the winner announcement!</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
